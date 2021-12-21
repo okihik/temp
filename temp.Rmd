@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{amssymb}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{bm}
+\usepackage[margin=1in]{geometry}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Akihiko Mori}
+\lhead{COURSE}         % change course name
+\rfoot{Page \thepage}
+\begin{document}
+
+<<include=FALSE>>=
+library(knitr)
+opts_chunk$set(
+concordance=TRUE
+)
+@
+
+\title{R Sweave Template}
+\author{Akihiko Mori}
+\maketitle
+
+\section*{"PROBLEM NUMBER ONE"}
+
+This is a simple homework assignment template. Notice that in the previous line we can create a header for our problem number by using a single "section*{}". The text is then automatically bolded and indented. Below we will create a sublist. This should be used if problems have more than one part.\\
+
+\begin{itemize}
+  \item{subpart one}
+  \item{subpart two}
+  \item{subpart three}
+\end{itemize}
+
+\section*{"PROBLEM NUMBER TWO"}
+
+Suppose we need to input an R chunk into our homework file. In this case, the following syntax should be used. Note that "'''" signifies we are include chunks of code (We may also tweak the options as necessary).\\
+
+
+<<>>=
+#input R code here. Examples:
+
+#define R list
+x = c(1,2,3,4,5)
+
+#make plot
+plot(x)
+@
+
+Below the R code, we can provide additional descriptions and/or explain our code more thoroughly.
+
+\section*{"PROBLEM NUMBER THREE}
+<<>>=
+
+#again, we can input our R code here.
+
+@
+
+\end{document}
