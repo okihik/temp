@@ -1,0 +1,282 @@
+\documentclass[11pt,a4paper]{report}\usepackage[]{graphicx}\usepackage[]{color}
+% maxwidth is the original width if it is less than linewidth
+% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\makeatletter
+\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}}}
+\makeatother
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\makeatletter
+\@ifundefined{AddToHook}{}{\AddToHook{package/xcolor/after}{
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+}}
+\makeatother
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage{graphicx,float}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+\setlength{\parskip}{0.75em}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb}
+
+\newcommand{\Thesis}{Thesis Title}
+\newcommand{\Degree}{Degree Name}
+\newcommand{\Name}{Your Name}
+\newcommand{\Roll}{Roll Number}
+\newcommand{\Supervisor}{Supervisor Name} %Write with Prof. or Dr. if not Professor
+\newcommand{\Department}{Department}
+\newcommand{\University}{University}
+\newcommand{\Place}{Place}
+\newcommand{\ThanksOne}{Your Lab Senior 1}
+\newcommand{\ThanksOneAffil}{Lab Senior 1 Affiliation} %For example: PhD scholar, Lab Name, University Name
+\newcommand{\ThanksTwo}{Your Lab Senior 2}
+\newcommand{\ThanksTwoAffil}{Lab Senior 2 Affiliation}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+%=========
+%Title Page
+%=========
+\begin{titlepage}
+\centering
+
+\hrule
+\vspace{5pt}
+\begin{LARGE}
+\textbf{\Thesis}
+\end{LARGE}
+\vspace{12pt}
+\hrule
+\vspace*{\fill}
+
+\begin{Large}
+Thesis report submitted in partial fulfillment of the requirements\\[6pt]
+for the degree of\\[6pt]
+\textbf{\Degree}\\[12pt]
+by\\[6pt]
+\textbf{\Name}\\[6pt]
+(Roll: \Roll)\\[12pt]
+Under the supervision of\\[6pt]
+\textbf{\Supervisor}\\
+\end{Large}
+\vfill
+
+\begin{figure}[H]
+\centering
+% \includegraphics[width=0.3\textwidth]{Logo}
+\end{figure}
+\vspace{\fill}
+
+\begin{Large}
+\Department\\
+\University\\
+\today
+\end{Large}
+
+\end{titlepage}
+
+
+
+%=============================
+%Roman Page Numbering From Now
+%=============================
+\pagenumbering{roman}
+
+
+
+%=========
+%Certificate
+%=========
+\addcontentsline{toc}{chapter}{Certificate}
+\chapter*{\centering Certificate}
+
+\textit{This is to certify that the work contained in this thesis entitled \textbf{``\Thesis"} is a bonafide work of \textbf{\Name} (\Roll), carried out in the \Department, \University\ under my supervision and that it has not been submitted elsewhere for a degree. }
+
+\begin{flushleft}
+\Place\\
+\today
+\end{flushleft}
+
+
+\begin{flushright}
+\textbf{\Supervisor}\\
+\Department\\
+\University
+\end{flushright}
+\thispagestyle{empty}
+\pagebreak
+
+
+
+%===============
+%Acknowledgments
+%===============
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\chapter*{\centering Acknowledgments}
+
+I express my deepest gratitude towards my Supervisor \textbf{\Supervisor} for the constant help and encouragement from the starting of the thesis work.\\
+I have been fortunate to have a Supervisor who gave me the freedom to explore on my own and at the same time helped me plan the future work-plan with timely reviews and suggestions wherever required. Thank you for giving me enough extension of time whenever required and having faith in me.
+
+It gives me great pleasure in acknowledging the support of \textbf{\ThanksOne} (\ThanksOneAffil), \textbf{\ThanksTwo} (\ThanksTwoAffil) for the constructive inputs and help. Thank you for clarifying my technical queries with a warm gesture.
+\vspace{18pt}
+
+\begin{flushleft}
+\Place\\
+\today
+\end{flushleft}
+
+\begin{flushright}
+\textbf{\Name}\\
+\end{flushright}
+
+
+\thispagestyle{empty}
+\pagebreak
+
+
+
+%==================
+%TOC, Tables, Figures
+%==================
+\tableofcontents
+\thispagestyle{empty}
+\pagebreak
+
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\thispagestyle{empty}
+\pagebreak
+
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\thispagestyle{empty}
+\pagebreak
+
+
+
+%=======
+%Abstract
+%=======
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{\centering Abstract}
+\thispagestyle{empty}
+\pagebreak
+
+
+
+%============================
+%Arabic Page Numbering From Now
+%============================
+\pagenumbering{arabic} 
+
+
+
+%===========
+%Introduction
+%===========
+\chapter{Introduction}
+% \input{Introduction}
+\pagebreak
+
+
+
+%=========================
+%Background and Related Work
+%=========================
+\chapter{Background and Related Work}
+\pagebreak
+
+
+
+%===============
+%Proposed Method
+%===============
+\chapter{Proposed Method}
+\pagebreak
+
+
+
+%=========
+%Evaluation
+%=========
+\chapter{Evaluation}
+\pagebreak
+
+
+
+%==========
+%Conclusion
+%==========
+\chapter{Conclusion}
+\pagebreak
+
+
+
+%==========
+%Future Plan
+%==========
+\chapter{Future Plan}
+\pagebreak
+
+
+
+%===========
+%Bibliography
+%===========
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{Bibliography} 
+\bibliographystyle{ieeetr}
+
+\end{document}
